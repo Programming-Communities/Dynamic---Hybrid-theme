@@ -26,8 +26,8 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-// Default theme - UPDATED to Primary Dark Blue
-const defaultTheme: Theme = 'primary-dark-blue';
+// Default theme - FIXED: must match the defined Theme union
+const defaultTheme: Theme = 'professional-blue';
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setThemeState] = useState<Theme>(defaultTheme);
